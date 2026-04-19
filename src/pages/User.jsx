@@ -120,9 +120,9 @@ useEffect(() => {
             ]);
 
         } catch (err) {
-                .error("Error fetching dependent data", err);
-}
+            console.error("Error fetching dependent data", err);
         }
+    }
     fetchDependentData();
     }, [effectiveOrgId])
 
