@@ -3,7 +3,6 @@ import axiosInstance from "./axiosInstance";
 
 const createOrganizationApi = async (data) => {
   const response = await axiosInstance.post("/organizations", data);
-  .log("response", response);
 return response;
 };
 

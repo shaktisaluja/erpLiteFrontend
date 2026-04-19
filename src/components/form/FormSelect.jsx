@@ -13,7 +13,6 @@ const FormSelect = ({
     ...props
 }) => {
 
-    .log("options", options);
 
 const sharedProps = {
     select: true,
@@ -36,7 +35,6 @@ const menuItems = [
         <em>{emptyOptionLabel || `Select ${label}`}</em>
     </MenuItem>,
     ...options.map((opt) => (
-            .log("opt", opt),
         <MenuItem key={opt.value} value={opt.value}>
             {opt.label}
         </MenuItem>

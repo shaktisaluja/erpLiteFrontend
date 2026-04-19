@@ -28,7 +28,6 @@ const UpdateOrgDialog = ({ open, onClose, rowData, onUpdate, loading }) => {
         timezone: rowData.timezone || ""
     } : undefined;
 
-    .log("formValues", formValues);
 
 const {
     register,

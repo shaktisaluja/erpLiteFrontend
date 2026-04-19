@@ -99,7 +99,6 @@ const User = () => {
         ? selectedOrganizationId
         : getUserOrganizationId(authUser);
 
-    .log("effectiveOrgId", effectiveOrgId);
 
 useEffect(() => {
     if (!effectiveOrgId) return;
@@ -158,7 +157,6 @@ const siteOptions = useMemo(
     [siteData]
 );
 
-    .log("siteOptions", siteOptions);
 
 const departmentOptions = useMemo(
     () =>
@@ -169,8 +167,6 @@ const departmentOptions = useMemo(
         })),
     [departmentData]
 );
-
-    .log("departmentOptions", departmentOptions);
 
 
 const isRoleSelectionDisabled = isSuperAdmin && !selectedOrganizationId;
@@ -190,9 +186,6 @@ const onSubmit = async (data) => {
         ...data,
         organizationId: isSuperAdmin ? data.organizationId : getUserOrganizationId(authUser)
     });
-
-
-        .log("res of creating the user", res);
 
 
 if (res) {
@@ -215,7 +208,6 @@ const closeUpdateDialog = () => {
 
 
 const handleDelete = async () => {
-        .log("selectedRow", selectedRow);
 const id = selectedRow?._id || selectedRow?.id;
 
 setUserData((prev) => prev.filter((user) => (user._id || user.id) !== id));

@@ -37,7 +37,6 @@ const Dashboard = () => {
     const fetchDashboardStats = async () => {
       try {
         const res = await dashboardApi.getDashboardStatsApi();
-        .log("res of fetching dashboard stats", res);
   setDashboardData(getDashboardPayload(res?.data));
 
 } catch (error) {

@@ -56,8 +56,6 @@ const Roles = () => {
 
     const { orgData, fetchOrganizationBasicDetails } = useOrganization();
 
-    .log("orgData inside fxn ", orgData);
-
 const [expanded, setExpanded] = useState(false);
 const [openDelete, setOpenDelete] = useState(false);
 const [openUpdate, setOpenUpdate] = useState(false);

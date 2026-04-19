@@ -46,8 +46,6 @@ const Site = () => {
   } = useSite();
   const { orgData, fetchOrganizationBasicDetails } = useOrganization();
 
-  .log("siteData", siteData);
-
 const timeZones = useMemo(() => moment.tz.names(), []);
 const organizationOptions = useMemo(
   () =>
